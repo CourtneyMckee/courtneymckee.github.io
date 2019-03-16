@@ -30,12 +30,13 @@
           <h2> How to Make the Infinity Mirror</h2>
           <p> Before I began making the mirror I watched and read tutorials. Through this I learned that I will need a shadow box, glass, two way window tint, a mirror, and a LED strip. To create the infinity mirror you must put the window tint on one side of the glass. Once you let that dry and make sure there are no air bubbles you insert that into the frame, glass side facing down when putting in, so that the window tint is facing into the picture frame. Next you put in a spacer, like wood, which comes with a shadow box. The LED strip should be put onto the spacer. Next you put the mirror in, but make sure that the LED wires are sticking out side of the frame, so you can attach the alligator clips. That is all it takes to build the infinity mirror, next is technical implementation. </p>
           <h1> Technical Implementation </h1>
+          <p> For each section there will be a brief description on what I did and what you would need to do in order to create this project yourself.</p>
             <h2> Circuit </h2>
             <p>
             <img src="wideshotcircfinal.jpg" width=800></a>
             <img src="closeupscirfinal.jpg" width=900></a>
             </p>
-            <p> This is the circuit. The photoresistor (input) is connected to pin A0, and the transistor (ouput) is connected to pin 9, and the ir sensor (input) is connected to pin 7.
+            <p> This is the circuit and in order to recreate this make sure that your input and outputs are connected to the right pins. The photoresistor (input) is connected to pin A0, and the transistor (ouput) is connected to pin 9, and the ir sensor (input) is connected to pin 7.
              </p>
              <br>
             <h2> Schematic </h2>
@@ -43,7 +44,8 @@
             <img src="fnal_calc.jpg" width=600></a>
             <img src="final_sch.jpg" width=800></a>
             </p>
-            <p> This is the schematic for the circuit and the calculation for the resisitors. For the first calculation I used 5V because this is the voltage coming from the arduino board. I used 20mA for it because that is the desired current. I used a 10K resistor for R1 because it could be anything over 25 ohms. I used a 10k resistor for all of them though to insure that there will not be a short and it limits the current. <br> For the second calculation I was finding how much current is running through the transistor. I found how many lights I was using and found the watts. Using this I found how much current is running through my transistor. As long as it is under.6A then I am not going over the max current. For the last calculation I was finding what the minimum resistance for the transistor which is 12.35 but I used a 10K resistor to insure that there will not be a short and it limits the current.  <br> </p>
+            <p> This is the schematic for the circuit and the calculation for the resisitors. For the first calculation I used 5V because this is the voltage coming from the arduino board. I used 20mA for it because that is the desired current. I used a 10K resistor for R1 because it could be anything over 25 ohms. I used a 10k resistor for all of them though to insure that there will not be a short and it limits the current. <br> For the second calculation I was finding how much current is running through the transistor. I found how many lights I was using and found the watts. Using this I found how much current is running through my transistor. As long as it is under.6A then I am not going over the max current. For the last calculation I was finding what the minimum resistance for the transistor which is 12.35 but I used a 10K resistor to insure that there will not be a short and it limits the current.
+            So, if you recreate this make sure to follow the schematic and use the correct resistors. <br> </p>
             <br>
             <h2> Code Snippet</h2>
             <p>
@@ -52,7 +54,8 @@
             <img src="codesnippet3.png" width=1000></a>
             </p>
             <p> For this code I used a switch case so that I was able to switch between the different buttons. The different cases I did were on, off, flash, fade, and strobe. When the on button was pressed an integer called powerstate was changed to 1. When powerstate was 1 then the different modes could happen.
-            When the flash button was pressed then it would go into the blinkmethod, when the fade button was pressed then it would go into the fade method, and if the strobe button was pressed then it would map the value from the photoresistor to the led strip. When the room was dark the led strip would be super bright and when it is light in the room then the led strip would be dim.</p>
+            When the flash button was pressed then it would go into the blinkmethod, when the fade button was pressed then it would go into the fade method, and if the strobe button was pressed then it would map the value from the photoresistor to the led strip. When the room was dark the led strip would be super bright and when it is light in the room then the led strip would be dim.
+            In order to exit the while loops for fade and blink make sure to check if you pressed another button. </p>
             <br>
             <h2>Cicuit Operation</h2>
             <p>
